@@ -1,21 +1,22 @@
 # AI 电子伴侣 - 学习路线图 (Roadmap)
 
 > 基于教程 https://aicompanion.usehook.cn/
-> 最后更新：2026-04-18
+> 最后更新：2026-04-19
+> 教程状态：共 115 章，已新增 Zod 数据契约与结构化输出专题（Ch102-115）
 
 ---
 
 ## 学习路径总览
 
 ```
-Phase 1          Phase 2          Phase 3          Phase 4          Phase 5          Phase 6
-理论认知 ──────▶ LangChain ─────▶ LangGraph ─────▶ Monorepo ──────▶ Hono.js ───────▶ 综合实战
-(Ch01-20)        (Ch21-43)        (Ch44-61)        (Ch62-75)        (Ch76-100)       (回顾整合)
-   │                │                │                │                │                │
-   │   AI 思维建立   │   原子能力     │   编排能力      │   工程化能力    │   部署能力      │   产品交付
-   │   架构认知      │   工具链掌握   │   状态管理      │   协作能力      │   全栈能力      │
-   ▼                ▼                ▼                ▼                ▼                ▼
-  基础             基础→进阶         进阶→高级         基础→进阶        基础→进阶         高级
+Phase 1          Phase 2          Phase 3          Phase 4          Phase 5          Phase 6          Phase 7
+理论认知 ──────▶ LangChain ─────▶ LangGraph ─────▶ Monorepo ──────▶ Hono.js ───────▶ Zod 契约层 ───▶ 综合实战
+(Ch01-20)        (Ch21-43)        (Ch44-61)        (Ch62-75)        (Ch76-101)       (Ch102-115)      (回顾整合)
+   │                │                │                │                │                │                │
+   │   AI 思维建立   │   原子能力     │   编排能力      │   工程化能力    │   部署能力      │   数据契约能力   │   产品交付
+   │   架构认知      │   工具链掌握   │   状态管理      │   协作能力      │   全栈能力      │   结构化输出     │
+   ▼                ▼                ▼                ▼                ▼                ▼                ▼
+  基础             基础→进阶         进阶→高级         基础→进阶        基础→进阶         进阶            高级
 ```
 
 ---
@@ -222,7 +223,7 @@ Phase 1          Phase 2          Phase 3          Phase 4          Phase 5     
 
 ---
 
-## Phase 5: Hono.js 与 Cloudflare（Ch76-100）
+## Phase 5: Hono.js 与 Cloudflare（Ch76-101）
 
 **目标**：掌握 Hono.js 全栈开发与 CloudFlare Workers 部署
 
@@ -240,44 +241,95 @@ Phase 1          Phase 2          Phase 3          Phase 4          Phase 5     
 | Ch81 | 中间件 | 🟠 | **重点** |
 | Ch82 | 数据校验 | 🟠 | Zod 集成 |
 | Ch83 | 错误处理 | 🟠 | |
-| Ch84 | 认证与鉴权 | 🟠 | **⭐ 重点** - 安全 |
-| Ch85 | Cloudflare KV | 🟠 | **重点** - 边缘存储 |
-| Ch86 | Cloudflare D1 | 🟠 | **重点** - 关系数据库 |
-| Ch87 | D1 + Drizzle ORM | 🟠 | **⭐ 重点** - ORM 实战 |
-| Ch88 | Cloudflare R2 | 🟢 | 对象存储 |
-| Ch89 | RPC 客户端 | 🟠 | **⭐ 重点** - 端到端类型安全 |
-| Ch90 | 流式响应与 SSE | 🟠 | **⭐ 重点** - AI 流式 |
-| Ch91 | 项目结构与环境管理 | 🟠 | 工程实践 |
-| Ch92 | **实战：用户系统 REST API** | 🟠 | **⭐ 实战** |
-| Ch93 | **实战：AI API 网关** | 🔴 | **⭐⭐ 核心实战** |
-| Ch94 | Workers AI 与 AI Gateway | 🟠 | **重点** - 边缘 AI |
-| Ch95 | Vectorize 与 RAG 实战 | 🔴 | **⭐ 核心难点** - 边缘 RAG |
-| Ch96 | Durable Objects 与 WebSocket | 🔴 | **难点** - 实时通信 |
-| Ch97 | Queues 与 Cron 定时任务 | 🟠 | 异步任务 |
-| Ch98 | 缓存策略 | 🟠 | 性能优化 |
-| Ch99 | 日志与可观测性 | 🟠 | 生产运维 |
-| Ch100 | Hono 与 Next.js 集成 | 🟠 | **⭐ 重点** - 前后端打通 |
+| Ch84 | 认证 | 🟠 | **⭐ 重点** - 身份校验 |
+| Ch85 | 鉴权 | 🟠 | **⭐ 重点** - 权限控制 |
+| Ch86 | Cloudflare KV | 🟠 | **重点** - 边缘存储 |
+| Ch87 | Cloudflare D1 | 🟠 | **重点** - 关系数据库 |
+| Ch88 | D1 + Drizzle ORM | 🟠 | **⭐ 重点** - ORM 实战 |
+| Ch89 | Cloudflare R2 | 🟢 | 对象存储 |
+| Ch90 | RPC 客户端 | 🟠 | **⭐ 重点** - 端到端类型安全 |
+| Ch91 | 流式响应与 SSE | 🟠 | **⭐ 重点** - AI 流式 |
+| Ch92 | 项目结构与环境管理 | 🟠 | 工程实践 |
+| Ch93 | **实战：用户系统 REST API** | 🟠 | **⭐ 实战** |
+| Ch94 | **实战：AI API 网关** | 🔴 | **⭐⭐ 核心实战** |
+| Ch95 | Workers AI 与 AI Gateway | 🟠 | **重点** - 边缘 AI |
+| Ch96 | Vectorize 与 RAG 实战 | 🔴 | **⭐ 核心难点** - 边缘 RAG |
+| Ch97 | Durable Objects 与 WebSocket | 🔴 | **难点** - 实时通信 |
+| Ch98 | Queues 与 Cron 定时任务 | 🟠 | 异步任务 |
+| Ch99 | 缓存策略 | 🟠 | 性能优化 |
+| Ch100 | 日志与可观测性 | 🟠 | 生产运维 |
+| Ch101 | Hono 与 Next.js 集成 | 🟠 | **⭐ 收官** - 前后端打通 |
 
 ### Milestone 5 检查点
 
 - [ ] 能用 Hono.js 创建基本的 REST API
-- [ ] 掌握 CloudFlare 存储三件套（D1 + KV + Vectorize）
+- [ ] 掌握 CloudFlare 存储三件套（KV + D1 + R2 / Vectorize）
 - [ ] 实现 Hono RPC 端到端类型安全调用
 - [ ] 能实现流式响应（SSE）
 - [ ] 完成用户系统 REST API 实战
 - [ ] 完成 AI API 网关实战
 - [ ] 实现边缘 RAG 检索
+- [ ] 理解 Hono 与 Next.js 的集成边界
 
 ### ⚠️ 常见卡点
 
 1. **CF Workers 环境限制** —— 不支持 Node.js 所有 API，部分 npm 包不兼容
 2. **D1 的 SQLite 方言差异** —— 和 MySQL/PostgreSQL 有语法差异
-3. **Durable Objects (Ch96)** —— 概念较新，理解"有状态的边缘对象"需要时间
-4. **Vectorize (Ch95)** —— 需要结合 Phase 2 的 RAG 知识
+3. **Durable Objects (Ch97)** —— 概念较新，理解"有状态的边缘对象"需要时间
+4. **Vectorize (Ch96)** —— 需要结合 Phase 2 的 RAG 知识
+5. **Hono / Next.js 集成 (Ch101)** —— 需要同时理解 RPC、部署边界、类型共享
 
 ---
 
-## Phase 6: 综合实战与回顾
+## Phase 6: Zod 数据契约与结构化输出（Ch102-115）
+
+**目标**：掌握以 Zod 为中心的数据契约设计，把前端、服务端与 LLM 输出统一到一套 schema 上
+
+**难度**：🟠 进阶
+
+**前置要求**：Phase 4 Monorepo 与 Phase 5 Hono.js 基础；建议已理解 TypeScript 类型系统
+
+| 章节 | 标题 | 难度 | 重点标记 |
+|------|------|------|---------|
+| Ch102 | Zod 是什么 | 🟢 | 概念建立 |
+| Ch103 | 单一真实来源 | 🟠 | **⭐ 重点** - Single Source of Truth |
+| Ch104 | parse 与 safeParse | 🟠 | **重点** - 校验方式差异 |
+| Ch105 | 基础类型 | 🟢 | |
+| Ch106 | 对象与数组 | 🟢 | |
+| Ch107 | 可选、默认值与空值 | 🟠 | 常见边界 |
+| Ch108 | 联合与字面量 | 🟠 | 类型收束 |
+| Ch109 | 自定义校验 | 🟠 | **重点** - refine / superRefine |
+| Ch110 | 数据变换 | 🟠 | **重点** - transform / pipe |
+| Ch111 | 类型推导 | 🟠 | **⭐ 重点** - infer / input / output |
+| Ch112 | Schema 组合 | 🟠 | **重点** - extend / merge / pick / omit |
+| Ch113 | Zod + Hono | 🟠 | **⭐ 核心** - 接口契约落地 |
+| Ch114 | Zod + LLM | 🔴 | **⭐ 核心难点** - 结构化输出 |
+| Ch115 | 实战：端到端 AI Chat | 🔴 | **⭐⭐ 综合实战** |
+
+### Milestone 6 检查点
+
+- [ ] 能用 Zod 定义完整的数据 schema，并清楚区分 parse / safeParse
+- [ ] 理解 single source of truth，知道为什么前后端要共享 schema
+- [ ] 能通过 infer / input / output 衔接运行时校验与 TS 类型
+- [ ] 能把 Zod 接入 Hono 请求校验
+- [ ] 能用 Zod 约束 LLM 的结构化输出
+- [ ] 能完成端到端 AI Chat 的 schema 设计与联调
+
+### ⚠️ 常见卡点
+
+1. **Zod 不是只有校验** —— 更重要的是把“运行时数据边界”与“类型系统”统一
+2. **parse vs safeParse** —— 一个抛异常，一个返回结果对象，使用场景不同
+3. **transform / pipe** —— 很容易和纯校验混淆，需要区分“验证”与“数据变换”
+4. **Zod + LLM** —— 模型可能输出“看起来像 JSON”的错误结构，schema 约束是稳定性的关键
+5. **端到端 AI Chat** —— 前端表单、API 响应、模型输出要共享同一套契约，任何一层脱节都会出问题
+
+### 💡 推荐实践
+
+> 构建一个“结构化 AI 表单助手”：前端提交表单 → Hono 校验 → LLM 按 Zod schema 输出结果 → 前端安全渲染。
+
+---
+
+## Phase 7: 综合实战与回顾
 
 **目标**：将所有知识整合，交付完整的 AI 伴侣产品
 
@@ -287,13 +339,14 @@ Phase 1          Phase 2          Phase 3          Phase 4          Phase 5     
 
 1. 回顾 Ch60（LangGraph 重构 AI 伴侣管线）
 2. 搭建 Monorepo 项目结构（Phase 4）
-3. 实现 Hono 服务端（Phase 5 的 Ch92-93）
+3. 实现 Hono 服务端（Phase 5 的 Ch93-94）
 4. 接入 LangChain + LangGraph 编排（Phase 2-3）
-5. 完成 Next.js 客户端聊天界面
-6. 实现记忆系统 + 情绪状态机
-7. 部署到 CloudFlare Workers
-8. 接入可观测性（LangSmith/Langfuse）
-9. 影子模式验证 + 灰度上线
+5. 用 Zod 统一前端 / 服务端 / LLM 数据契约（Phase 6）
+6. 完成 Next.js 客户端聊天界面
+7. 实现记忆系统 + 情绪状态机
+8. 部署到 CloudFlare Workers
+9. 接入可观测性（LangSmith/Langfuse）
+10. 影子模式验证 + 灰度上线
 
 ### 最终检查点
 
@@ -302,6 +355,7 @@ Phase 1          Phase 2          Phase 3          Phase 4          Phase 5     
 - [ ] 记忆系统支持跨会话长期记忆
 - [ ] 情绪状态机正常工作（会"记仇"、会"害羞"）
 - [ ] 流式响应体验流畅
+- [ ] Zod schema 成为前后端与 AI 输出的统一契约
 - [ ] 可观测性面板可以看到完整调用链路
 - [ ] 成功部署到 CloudFlare Workers 边缘
 
@@ -317,16 +371,17 @@ Phase 1          Phase 2          Phase 3          Phase 4          Phase 5     
 | Phase 2 | LangChain 23 章 | 边学边练，每章写代码 |
 | Phase 3 | LangGraph 18 章 | 画图 + 写代码，难度最高 |
 | Phase 4 | Monorepo 14 章 | 跟着搭项目 |
-| Phase 5 | Hono.js 25 章 | 边学边部署 |
-| Phase 6 | 综合实战 | 整合交付 |
+| Phase 5 | Hono.js 26 章 | 边学边部署 |
+| Phase 6 | Zod 14 章 | 多做 schema 设计与联调 |
+| Phase 7 | 综合实战 | 整合交付 |
 
 ### 学习策略
 
 1. **Phase 1 不要跳过** —— 理论章节是后续所有实践的认知基础
 2. **Phase 2 和 Phase 3 是核心** —— 花最多时间在这里，尤其是 LangGraph
-3. **Phase 4 和 Phase 5 可以并行** —— Monorepo 和 Hono.js 相对独立
+3. **Phase 4、Phase 5、Phase 6 构成工程落地三件套** —— Monorepo 管协作，Hono 管接口，Zod 管契约
 4. **每个 Phase 结束时检查 Milestone** —— 确保真正掌握再往下走
-5. **Ch60 是全课程的关键节点** —— 用 LangGraph 重构 AI 伴侣管线，必须反复研读
+5. **Ch60 与 Ch115 是两个关键节点** —— 前者整合 Agent 编排，后者整合端到端契约与 AI Chat
 6. **遇到难点先标记，后面回来** —— 有些概念需要更多上下文才能完全理解
 
 ### 难度递进曲线
@@ -336,13 +391,13 @@ Phase 1          Phase 2          Phase 3          Phase 4          Phase 5     
  ▲
  │                                    ┌─── Ch55-57 多Agent
  │                              ┌─────┤    Ch60 综合实战
- │                        ┌─────┘     └─── Ch95-96 边缘实战
- │                  ┌─────┘
+ │                        ┌─────┘     ├─── Ch96-97 边缘实战
+ │                  ┌─────┘           └─── Ch114-115 Zod + LLM / 端到端 AI Chat
  │            ┌─────┘  Ch48 Checkpointer
  │      ┌─────┘     Ch39 RAG
  │ ┌────┘   Ch36 记忆持久化
  │─┘  Ch04 内存调度
  │ Ch01-03
- └──────────────────────────────────────────────▶ 章节
-   Phase1      Phase2      Phase3    Phase4  Phase5
+ └──────────────────────────────────────────────────────────▶ 章节
+   Phase1      Phase2      Phase3      Phase4   Phase5   Phase6
 ```
