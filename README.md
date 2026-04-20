@@ -14,6 +14,29 @@
 
 每个 `.md` 文件都有对应的 `.excalidraw` 可视化图表，可用 [Excalidraw](https://excalidraw.com/) 或 VS Code 插件打开。
 
+## 专项学习计划与学习技能
+
+- 专项计划总入口：[学习计划/README.md](学习计划/README.md)
+- 通用方法论：[学习计划/00-学习方法与评估标准.md](学习计划/00-学习方法与评估标准.md)
+
+| 领域 | 学习计划 | 对应 skill | 教程主章节 |
+|---|---|---|---|
+| LangChain | [01-LangChain-学习计划.md](学习计划/01-LangChain-学习计划.md) | `/langchain-study-plan` | Ch21-Ch43 |
+| LangGraph | [02-LangGraph-学习计划.md](学习计划/02-LangGraph-学习计划.md) | `/langgraph-study-plan` | Ch44-Ch61 |
+| Vercel AI SDK | [03-Vercel-AI-SDK-学习计划.md](学习计划/03-Vercel-AI-SDK-学习计划.md) | `/vercel-ai-sdk-study-plan` | Ch116-Ch132 |
+| MCP | [04-MCP-学习计划.md](学习计划/04-MCP-学习计划.md) | `/mcp-study-plan` | Ch133-Ch134 |
+| LangSmith | [05-LangSmith-学习计划.md](学习计划/05-LangSmith-学习计划.md) | `/langsmith-study-plan` | Ch17, Ch43 |
+| Langfuse | [06-Langfuse-学习计划.md](学习计划/06-Langfuse-学习计划.md) | `/langfuse-study-plan` | Ch17, Ch43 |
+| Next.js | [07-Next.js-学习计划.md](学习计划/07-Next.js-学习计划.md) | `/nextjs-study-plan` | Ch101, Ch126-Ch136 |
+| React Query | [08-React-Query-学习计划.md](学习计划/08-React-Query-学习计划.md) | `/react-query-study-plan` | Ch90, Ch101, Ch115, Ch126 |
+| Hono.js | [09-Hono.js-学习计划.md](学习计划/09-Hono.js-学习计划.md) | `/hono-study-plan` | Ch76-Ch101 |
+| Zod | [10-Zod-学习计划.md](学习计划/10-Zod-学习计划.md) | `/zod-study-plan` | Ch102-Ch115 |
+| Drizzle ORM | [11-Drizzle-ORM-学习计划.md](学习计划/11-Drizzle-ORM-学习计划.md) | `/drizzle-orm-study-plan` | Ch88, Ch93 |
+| Cloudflare | [12-Cloudflare-学习计划.md](学习计划/12-Cloudflare-学习计划.md) | `/cloudflare-study-plan` | Ch11, Ch18, Ch77, Ch86-Ch100 |
+| Turborepo | [13-Turborepo-学习计划.md](学习计划/13-Turborepo-学习计划.md) | `/turborepo-study-plan` | Ch71-Ch74 |
+| Monorepo | [14-Monorepo-学习计划.md](学习计划/14-Monorepo-学习计划.md) | `/monorepo-study-plan` | Ch13-Ch14, Ch62-Ch75 |
+| pnpm workspaces | [15-pnpm-workspaces-学习计划.md](学习计划/15-pnpm-workspaces-学习计划.md) | `/pnpm-workspaces-study-plan` | Ch63-Ch67 |
+
 ## 技术栈
 
 ```

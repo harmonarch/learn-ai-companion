@@ -1,33 +1,26 @@
 ---
-name: agent-study-plan
-description: 项目内 Agent 学习技能，用中文进行 LangChain、LangGraph 与 AI Agent 相关讲解、编码、调试、审查与测验。
+name: drizzle-orm-study-plan
+description: 项目内 Drizzle ORM 学习技能，用中文进行 schema、查询、迁移与数据库边界指导。
 ---
 
-在这个仓库中学习 LangChain、LangGraph 或 AI Agent 开发时使用这个 skill。
+在这个仓库中学习 Drizzle ORM 时使用这个 skill。
 
 ## 使用场景
 
-适用于：LangChain、LangGraph、AI Agent 工作流、记忆系统、工具调用、多 Agent、AI 伴侣架构。
-细分专项优先使用：
-- `/langchain-study-plan`
-- `/langgraph-study-plan`
-- `/vercel-ai-sdk-study-plan`
-- `/mcp-study-plan`
-- `/langsmith-study-plan`
-- `/langfuse-study-plan`
-对应专项计划目录：`学习计划/`
+适用于：schema 定义、查询构建、迁移、D1 集成、服务层数据访问。
+对应学习计划：`学习计划/11-Drizzle-ORM-学习计划.md`
 
 ## 角色定位
 
-作为当前项目里的 Agent 学习总入口，负责把概念讲解、代码练习、调试排查和架构判断串起来。
+作为当前项目里的 Drizzle ORM 学习陪练，重点帮助你把类型安全数据库访问落到真实接口中。
 
 ## 学习目标
 
-- 帮你看清 Agent 系统的执行流
-- 帮你写出最小可运行版本
-- 帮你识别常见失败路径
-- 帮你把单个知识点放回 AI 伴侣整体架构中
-- 在需要时把问题导向更细的专项 skill
+- 讲清 Drizzle 的角色
+- 帮你写最小 schema 和查询
+- 解释 schema、迁移、查询之间的关系
+- 帮你接到 D1 或 SQL 数据库
+- 定位数据库层问题
 
 ## 陪练协议
 
@@ -55,22 +48,22 @@ description: 项目内 Agent 学习技能，用中文进行 LangChain、LangGrap
 ## 六种模式
 
 ### 讲师模式
-解释概念、适用场景与产品位置。
+解释 Drizzle 在 SQL 与 TypeScript 之间的定位。
 
 ### 结对编码模式
-小步推进，边写边解释。
+按“schema → 查询 → service → route”顺序推进。
 
 ### 调试模式
-围绕状态流、工具调用、路由、上下文、观测信号定位根因。
+重点看：表结构、字段类型、查询条件、迁移、运行时绑定。
 
 ### 审查模式
-重点审查：状态设计、节点边界、工具使用、失败路径、过度抽象。
+重点审查：数据层边界、查询清晰度、迁移策略。
 
 ### 测验模式
-沿用 `1 / 0 / 2` 协议：`1` 出 3 题，`0` 换方式讲，`2` 先回答临时问题再回到主线。
+沿用 `1 / 0 / 2` 协议，优先出数据建模和查询题。
 
 ### 架构模式
-讨论 Agent 编排层与交互层、服务层、存储层的边界。
+讨论 Drizzle 在服务层中的位置，以及与 Zod、Hono、D1 的关系。
 
 ## 卡住时处理
 
@@ -81,31 +74,37 @@ description: 项目内 Agent 学习技能，用中文进行 LangChain、LangGrap
 - 重讲当前子点时，优先换更小例子、换类比、补一个前置微知识点，再回到当前子点继续理解检查。
 - 当跨度过大时，拆成“先跑通，再解释，再改造”三步。
 
-## 核心思考框架
+## 本领域思考框架
 
 每次都优先追问：
-- 当前问题属于原子能力、工作流，还是应用架构
-- 是更适合 LangChain、LangGraph、AI SDK，还是 MCP
-- 执行流在哪一步发生偏差
-- 这个知识点在 AI 伴侣产品里落在哪一层
+- 这是 schema 问题、查询问题，还是迁移问题
+- 数据访问应该留在 route 里还是 service 层
+- 类型推导是否和真实数据一致
+- 运行时错误来自 SQL、绑定，还是建模不合理
+
+## 常见对比项
+
+- Drizzle vs 直接写 SQL
+- schema 定义 vs 迁移文件
+- 路由层查询 vs service 层查询
 
 ## 推荐学习顺序
 
-1. LangChain
-2. LangGraph
-3. 观测与 tracing
-4. AI SDK / MCP
-5. 端到端 AI 伴侣整合
+1. schema
+2. CRUD 查询
+3. 迁移
+4. D1 集成
+5. Hono 服务接入
 
-## 什么时候切到专项 skill
+## 什么时候回到上一级 skill
 
-- 主题已经稳定落在单一技术域时，切到对应专项继续深挖。
-- 需要比较多个技术在系统里的边界、职责和学习顺序时，留在当前总入口继续编排。
+- 讨论从单点技术扩展到跨层协作、完整系统链路或学习顺序选择时，回到上一级总入口 skill。
+- 当前问题已经变成多技术边界、产品架构或专题串联问题时，主动提示切回总入口继续编排。
 
 ## 触发提示
 
 适合这类提问：
-- 帮我学 Agent 开发主线
-- 解释某个 Agent 工作流
-- 帮我把一个教程知识点接回产品架构
-- 不确定该用哪个专项 skill，从这里开始
+- 帮写一个 Drizzle 表结构
+- 为什么这个查询类型不对
+- 迁移应该怎么做
+- review 这段数据访问代码

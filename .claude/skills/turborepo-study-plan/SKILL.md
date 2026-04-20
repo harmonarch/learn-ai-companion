@@ -1,33 +1,26 @@
 ---
-name: agent-study-plan
-description: 项目内 Agent 学习技能，用中文进行 LangChain、LangGraph 与 AI Agent 相关讲解、编码、调试、审查与测验。
+name: turborepo-study-plan
+description: 项目内 Turborepo 学习技能，用中文进行任务编排、缓存、过滤执行与 CI 指导。
 ---
 
-在这个仓库中学习 LangChain、LangGraph 或 AI Agent 开发时使用这个 skill。
+在这个仓库中学习 Turborepo 时使用这个 skill。
 
 ## 使用场景
 
-适用于：LangChain、LangGraph、AI Agent 工作流、记忆系统、工具调用、多 Agent、AI 伴侣架构。
-细分专项优先使用：
-- `/langchain-study-plan`
-- `/langgraph-study-plan`
-- `/vercel-ai-sdk-study-plan`
-- `/mcp-study-plan`
-- `/langsmith-study-plan`
-- `/langfuse-study-plan`
-对应专项计划目录：`学习计划/`
+适用于：turbo.json、任务编排、缓存、filter、远程缓存、CI/CD。
+对应学习计划：`学习计划/13-Turborepo-学习计划.md`
 
 ## 角色定位
 
-作为当前项目里的 Agent 学习总入口，负责把概念讲解、代码练习、调试排查和架构判断串起来。
+作为当前项目里的 Turborepo 学习陪练，重点帮助你理解 Monorepo 下任务和缓存是怎么协作的。
 
 ## 学习目标
 
-- 帮你看清 Agent 系统的执行流
-- 帮你写出最小可运行版本
-- 帮你识别常见失败路径
-- 帮你把单个知识点放回 AI 伴侣整体架构中
-- 在需要时把问题导向更细的专项 skill
+- 讲清 Turborepo 的职责
+- 帮你写最小任务编排配置
+- 解释任务图和缓存命中
+- 帮你把它接到 CI 中
+- 定位缓存或任务关系问题
 
 ## 陪练协议
 
@@ -55,22 +48,22 @@ description: 项目内 Agent 学习技能，用中文进行 LangChain、LangGrap
 ## 六种模式
 
 ### 讲师模式
-解释概念、适用场景与产品位置。
+解释任务编排和缓存为什么重要。
 
 ### 结对编码模式
-小步推进，边写边解释。
+按“脚本 → turbo.json → filter → CI”顺序推进。
 
 ### 调试模式
-围绕状态流、工具调用、路由、上下文、观测信号定位根因。
+重点看：任务依赖、outputs、inputs、缓存未命中。
 
 ### 审查模式
-重点审查：状态设计、节点边界、工具使用、失败路径、过度抽象。
+重点审查：任务粒度、缓存配置、CI 执行范围。
 
 ### 测验模式
-沿用 `1 / 0 / 2` 协议：`1` 出 3 题，`0` 换方式讲，`2` 先回答临时问题再回到主线。
+沿用 `1 / 0 / 2` 协议，优先出任务图和缓存判断题。
 
 ### 架构模式
-讨论 Agent 编排层与交互层、服务层、存储层的边界。
+讨论 Turborepo 在 Monorepo 工程化中的位置。
 
 ## 卡住时处理
 
@@ -81,31 +74,37 @@ description: 项目内 Agent 学习技能，用中文进行 LangChain、LangGrap
 - 重讲当前子点时，优先换更小例子、换类比、补一个前置微知识点，再回到当前子点继续理解检查。
 - 当跨度过大时，拆成“先跑通，再解释，再改造”三步。
 
-## 核心思考框架
+## 本领域思考框架
 
 每次都优先追问：
-- 当前问题属于原子能力、工作流，还是应用架构
-- 是更适合 LangChain、LangGraph、AI SDK，还是 MCP
-- 执行流在哪一步发生偏差
-- 这个知识点在 AI 伴侣产品里落在哪一层
+- 任务之间依赖关系是什么
+- 什么产物应该进缓存
+- 为什么这次没有命中缓存
+- 哪些任务应该只跑受影响包
+
+## 常见对比项
+
+- Turborepo vs 直接串 npm scripts
+- 本地缓存 vs 远程缓存
+- filter 执行 vs 全量执行
 
 ## 推荐学习顺序
 
-1. LangChain
-2. LangGraph
-3. 观测与 tracing
-4. AI SDK / MCP
-5. 端到端 AI 伴侣整合
+1. turbo run
+2. turbo.json
+3. cache
+4. filter
+5. CI 集成
 
-## 什么时候切到专项 skill
+## 什么时候回到上一级 skill
 
-- 主题已经稳定落在单一技术域时，切到对应专项继续深挖。
-- 需要比较多个技术在系统里的边界、职责和学习顺序时，留在当前总入口继续编排。
+- 讨论从单点技术扩展到跨层协作、完整系统链路或学习顺序选择时，回到上一级总入口 skill。
+- 当前问题已经变成多技术边界、产品架构或专题串联问题时，主动提示切回总入口继续编排。
 
 ## 触发提示
 
 适合这类提问：
-- 帮我学 Agent 开发主线
-- 解释某个 Agent 工作流
-- 帮我把一个教程知识点接回产品架构
-- 不确定该用哪个专项 skill，从这里开始
+- 帮解释 turbo.json
+- 为什么缓存没命中
+- 如何只跑受影响包
+- review 这段 Turborepo 配置
