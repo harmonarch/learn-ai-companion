@@ -2,25 +2,25 @@
 
 基于 [aicompanion.usehook.cn](https://aicompanion.usehook.cn/) 教程（"这波能反杀"出品）整理的学习资料。
 
-该教程围绕一个**企业级 AI 电子伴侣产品**展开，从智能体认知、LangChain/LangGraph 编排、Monorepo 工程化、Hono.js 边缘部署到 Zod 数据契约与结构化输出，共 115 章，持续更新中。
+该教程围绕一个**企业级 AI 电子伴侣产品**展开，从智能体认知、LangChain/LangGraph 编排、Monorepo 工程化、Hono.js 边缘部署、Zod 数据契约与结构化输出，继续扩展到 Vercel AI SDK、MCP 与端到端 AI Chat 重构，共 136 章。
 
 ## 文档说明
 
 | 文件 | 内容 |
 |------|------|
-| [架构总览.md](架构总览.md) | 四层架构、三子系统、数据流链路、内存调度、技术栈一览、技术重难点标注 |
-| [roadmap.md](roadmap.md) | 7 阶段学习路径、每阶段 Milestone 检查点、难度等级、常见卡点提醒 |
-| [知识地图.md](知识地图.md) | 7 大领域知识结构树、115 章节映射、依赖关系、跨章节关联、最小学习路径 |
+| [架构总览.md](架构总览.md) | 四层架构、三子系统、数据流链路、内存调度、Zod 契约层、AI SDK 交互层、技术栈与技术重难点 |
+| [roadmap.md](roadmap.md) | 8 阶段学习路径、每阶段 Milestone 检查点、难度等级、常见卡点提醒 |
+| [知识地图.md](知识地图.md) | 8 大领域知识结构树、136 章节映射、依赖关系、跨章节关联、最小学习路径 |
 
 每个 `.md` 文件都有对应的 `.excalidraw` 可视化图表，可用 [Excalidraw](https://excalidraw.com/) 或 VS Code 插件打开。
 
 ## 技术栈
 
 ```
-AI 核心        LangChain · LangGraph · LangSmith · RAG · Vectorize
+AI 核心        LangChain · LangGraph · Vercel AI SDK · MCP · LangSmith · Langfuse
 前端           Next.js · TailwindCSS · React Query · shadcn/ui
 服务端         Hono.js · Bun · Zod · Drizzle ORM
-基础设施       Cloudflare Workers · D1 · KV · Vectorize · Workers AI · R2
+基础设施       Cloudflare Workers · D1 · KV · Vectorize · Workers AI · R2 · Durable Objects
 工程化         Turborepo · Monorepo · pnpm workspaces
 ```
 
@@ -28,12 +28,12 @@ AI 核心        LangChain · LangGraph · LangSmith · RAG · Vectorize
 
 ```
 前端应用层     Next.js 客户端 (聊天)  ·  Next.js 后台管理 (运营)
-                          │ Hono RPC 端到端类型安全
+                          │ Hono RPC / AI SDK Stream
 服务接口层     Hono.js on Cloudflare Workers
                           │
-Agent 编排层   LangGraph (状态图编排/多Agent)  +  LangChain (RAG/工具/Memory)
+Agent 编排层   LangGraph (状态图编排/多Agent)  +  LangChain / AI SDK (RAG/工具/Memory/协议)
                           │
-基础设施层     CF D1 · KV · Vectorize · Workers AI · R2 · Durable Objects
+基础设施层     CF D1 · KV · Vectorize · Workers AI · R2 · Durable Objects · MCP 服务
 ```
 
 ## 核心难点速查
@@ -47,10 +47,13 @@ Agent 编排层   LangGraph (状态图编排/多Agent)  +  LangChain (RAG/工具
 | 🔴 | RAG 管线优化 | Ch39, 96 |
 | 🔴 | Checkpointer 状态持久化 | Ch48, 52 |
 | 🔴 | Zod + LLM 结构化输出契约 | Ch114-115 |
+| 🔴 | AI SDK 流式协议与 UI 渲染 | Ch122, 127-129 |
+| 🔴 | MCP 客户端 / 服务端 | Ch133-134 |
+| 🔴 | 端到端 AI Chat 重构 | Ch136 |
 | 🟠 | LCEL 链式调用 | Ch31-34 |
 | 🟠 | Hono RPC 端到端类型安全 | Ch90, 101 |
 | 🟠 | 边缘存储三件套 D1+KV+Vectorize | Ch86-88, 96 |
-| 🟠 | 流式响应 SSE | Ch15, 50, 91 |
+| 🟠 | 流式响应 SSE / UIMessageStream | Ch15, 50, 91, 122 |
 
 ## 学习路径
 
@@ -61,13 +64,14 @@ Phase 1 理论认知 (Ch01-20)
       → Phase 4 Monorepo (Ch62-75)
         → Phase 5 Hono.js (Ch76-101)
           → Phase 6 Zod 契约层 (Ch102-115)
-            → Phase 7 综合实战与回顾
+            → Phase 7 Vercel AI SDK (Ch116-136)
+              → Phase 8 综合实战与回顾
 ```
 
-> 最小路径：约 30 章覆盖所有核心知识点，详见 [知识地图.md](知识地图.md) 第六节。
+> 最小路径：约 40 章覆盖当前主线核心知识点，详见 [知识地图.md](知识地图.md) 第六节。
 
 ## 教程信息
 
 - 网站：https://aicompanion.usehook.cn/
 - 作者：这波能反杀
-- 状态：共 115 章，持续更新中
+- 状态：共 136 章，已覆盖 Vercel AI SDK、MCP 与端到端 AI Chat 重构

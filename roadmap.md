@@ -1,8 +1,8 @@
 # AI 电子伴侣 - 学习路线图 (Roadmap)
 
 > 基于教程 https://aicompanion.usehook.cn/
-> 最后更新：2026-04-19
-> 教程状态：共 115 章，已新增 Zod 数据契约与结构化输出专题（Ch102-115）
+> 最后更新：2026-04-20
+> 教程状态：共 136 章，已新增 Vercel AI SDK 专题（Ch116-136）
 
 ---
 
@@ -10,13 +10,13 @@
 
 ```
 Phase 1          Phase 2          Phase 3          Phase 4          Phase 5          Phase 6          Phase 7
-理论认知 ──────▶ LangChain ─────▶ LangGraph ─────▶ Monorepo ──────▶ Hono.js ───────▶ Zod 契约层 ───▶ 综合实战
-(Ch01-20)        (Ch21-43)        (Ch44-61)        (Ch62-75)        (Ch76-101)       (Ch102-115)      (回顾整合)
+理论认知 ──────▶ LangChain ─────▶ LangGraph ─────▶ Monorepo ──────▶ Hono.js ───────▶ Zod 契约层 ───▶ Vercel AI SDK
+(Ch01-20)        (Ch21-43)        (Ch44-61)        (Ch62-75)        (Ch76-101)       (Ch102-115)      (Ch116-136)
    │                │                │                │                │                │                │
-   │   AI 思维建立   │   原子能力     │   编排能力      │   工程化能力    │   部署能力      │   数据契约能力   │   产品交付
-   │   架构认知      │   工具链掌握   │   状态管理      │   协作能力      │   全栈能力      │   结构化输出     │
+   │   AI 思维建立   │   原子能力     │   编排能力      │   工程化能力    │   部署能力      │   数据契约能力   │   交互协议 / UI / MCP
+   │   架构认知      │   工具链掌握   │   状态管理      │   协作能力      │   全栈能力      │   结构化输出     │   端到端重构
    ▼                ▼                ▼                ▼                ▼                ▼                ▼
-  基础             基础→进阶         进阶→高级         基础→进阶        基础→进阶         进阶            高级
+  基础             基础→进阶         进阶→高级         基础→进阶        基础→进阶         进阶            进阶→高级
 ```
 
 ---
@@ -329,7 +329,63 @@ Phase 1          Phase 2          Phase 3          Phase 4          Phase 5     
 
 ---
 
-## Phase 7: 综合实战与回顾
+## Phase 7: Vercel AI SDK 与端到端交互重构（Ch116-136）
+
+**目标**：掌握 Vercel AI SDK 的消息协议、流式 UI、工具调用、MCP 与服务端集成，并完成端到端 AI Chat 重构
+
+**难度**：🟠 进阶 → 🔴 高级
+
+**前置要求**：Phase 5 Hono.js、Phase 6 Zod 契约层；建议已理解流式响应与 Tool Calling
+
+| 章节 | 标题 | 难度 | 重点标记 |
+|------|------|------|---------|
+| Ch116 | Vercel AI SDK | 🟢 | 概念建立 |
+| Ch117 | 三层架构 | 🟢 | 架构理解 |
+| Ch118 | 第一次调用 | 🟢 | **动手** |
+| Ch119 | 模型 Provider 生态 | 🟠 | 选型视角 |
+| Ch120 | 消息协议 | 🟠 | **⭐ 重点** - 消息抽象 |
+| Ch121 | Prompt 工程 × AI SDK | 🟠 | **重点** - Prompt 接入 |
+| Ch122 | UIMessageStream | 🟠 | **⭐ 核心** - 流式消息协议 |
+| Ch123 | 结构化输出 | 🟠 | **重点** - object 生成 |
+| Ch124 | Tool Calling | 🟠 | **⭐ 重点** - 工具协议 |
+| Ch125 | 多步推理 | 🔴 | **⭐ 核心难点** - 多轮决策 |
+| Ch126 | 聊天 UI 标准实现 | 🟠 | **实战** - useChat |
+| Ch127 | UI Message Parts | 🟠 | **重点** - 可组合消息片段 |
+| Ch128 | 结构化输出流式 UI | 🔴 | **⭐ 核心难点** - 结构化流式渲染 |
+| Ch129 | RSC 流式 UI | 🔴 | **难点** - React Server Components |
+| Ch130 | AI SDK × Hono | 🟠 | **⭐ 核心** - 服务端集成 |
+| Ch131 | 缓存、限流、Fallback | 🟠 | 生产能力 |
+| Ch132 | 可观测性：Telemetry | 🟠 | **重点** - 调试与观测 |
+| Ch133 | MCP 客户端 | 🔴 | **⭐ 重点** - 外部能力接入 |
+| Ch134 | 自建 MCP 服务端 | 🔴 | **⭐ 核心难点** - MCP 服务实现 |
+| Ch135 | 与 LangChain 协同 | 🟠 | **重点** - 双框架协作 |
+| Ch136 | 重构端到端 AI Chat | 🔴 | **⭐⭐ 综合实战** |
+
+### Milestone 7 检查点
+
+- [ ] 理解 AI SDK 的消息协议与流式输出模型
+- [ ] 能用 useChat 构建标准聊天 UI
+- [ ] 能完成 Tool Calling 与多步推理链路
+- [ ] 能把 AI SDK 接入 Hono 服务端
+- [ ] 理解 MCP 客户端 / 服务端的职责边界
+- [ ] 完成 Ch136：重构端到端 AI Chat
+
+### ⚠️ 常见卡点
+
+1. **消息协议抽象 (Ch120, Ch122)** —— 容易只看到 UI 表象，忽略底层消息流模型
+2. **多步推理 (Ch125)** —— 需要把工具调用、状态推进、停止条件一起看
+3. **结构化输出流式 UI (Ch128)** —— 既涉及 schema，又涉及增量渲染
+4. **RSC 流式 UI (Ch129)** —— 需要同时理解 React Server Components 与流式交付
+5. **MCP (Ch133-134)** —— 客户端与服务端职责、协议边界、能力暴露方式容易混淆
+6. **AI SDK × LangChain 协同 (Ch135)** —— 需要分清谁负责协议/UI，谁负责编排/工具链
+
+### 💡 推荐实践
+
+> 构建一个“AI SDK 聊天工作台”：前端 useChat + 结构化输出卡片 + Hono 服务端 + MCP 工具接入，最后重构成完整端到端 AI Chat。
+
+---
+
+## Phase 8: 综合实战与回顾
 
 **目标**：将所有知识整合，交付完整的 AI 伴侣产品
 
@@ -342,11 +398,12 @@ Phase 1          Phase 2          Phase 3          Phase 4          Phase 5     
 3. 实现 Hono 服务端（Phase 5 的 Ch93-94）
 4. 接入 LangChain + LangGraph 编排（Phase 2-3）
 5. 用 Zod 统一前端 / 服务端 / LLM 数据契约（Phase 6）
-6. 完成 Next.js 客户端聊天界面
-7. 实现记忆系统 + 情绪状态机
-8. 部署到 CloudFlare Workers
-9. 接入可观测性（LangSmith/Langfuse）
-10. 影子模式验证 + 灰度上线
+6. 用 Vercel AI SDK 重构消息协议、UI 流式输出与端到端交互（Phase 7）
+7. 完成 Next.js 客户端聊天界面
+8. 实现记忆系统 + 情绪状态机
+9. 部署到 CloudFlare Workers
+10. 接入可观测性（LangSmith/Langfuse/Telemetry）
+11. 影子模式验证 + 灰度上线
 
 ### 最终检查点
 
@@ -356,6 +413,8 @@ Phase 1          Phase 2          Phase 3          Phase 4          Phase 5     
 - [ ] 情绪状态机正常工作（会"记仇"、会"害羞"）
 - [ ] 流式响应体验流畅
 - [ ] Zod schema 成为前后端与 AI 输出的统一契约
+- [ ] AI SDK 消息协议与 UI 渲染链路稳定
+- [ ] MCP 能力接入可控且可观测
 - [ ] 可观测性面板可以看到完整调用链路
 - [ ] 成功部署到 CloudFlare Workers 边缘
 
@@ -373,16 +432,18 @@ Phase 1          Phase 2          Phase 3          Phase 4          Phase 5     
 | Phase 4 | Monorepo 14 章 | 跟着搭项目 |
 | Phase 5 | Hono.js 26 章 | 边学边部署 |
 | Phase 6 | Zod 14 章 | 多做 schema 设计与联调 |
-| Phase 7 | 综合实战 | 整合交付 |
+| Phase 7 | Vercel AI SDK 21 章 | 多做协议、UI、工具链整合 |
+| Phase 8 | 综合实战 | 整合交付 |
 
 ### 学习策略
 
 1. **Phase 1 不要跳过** —— 理论章节是后续所有实践的认知基础
 2. **Phase 2 和 Phase 3 是核心** —— 花最多时间在这里，尤其是 LangGraph
 3. **Phase 4、Phase 5、Phase 6 构成工程落地三件套** —— Monorepo 管协作，Hono 管接口，Zod 管契约
-4. **每个 Phase 结束时检查 Milestone** —— 确保真正掌握再往下走
-5. **Ch60 与 Ch115 是两个关键节点** —— 前者整合 Agent 编排，后者整合端到端契约与 AI Chat
-6. **遇到难点先标记，后面回来** —— 有些概念需要更多上下文才能完全理解
+4. **Phase 7 补交互协议与产品层实现** —— AI SDK、MCP、流式 UI 会把前面能力真正串到用户体验上
+5. **每个 Phase 结束时检查 Milestone** —— 确保真正掌握再往下走
+6. **Ch60、Ch115、Ch136 是三个关键节点** —— 分别对应编排整合、契约整合、端到端交互重构
+7. **遇到难点先标记，后面回来** —— 有些概念需要更多上下文才能完全理解
 
 ### 难度递进曲线
 
@@ -392,12 +453,12 @@ Phase 1          Phase 2          Phase 3          Phase 4          Phase 5     
  │                                    ┌─── Ch55-57 多Agent
  │                              ┌─────┤    Ch60 综合实战
  │                        ┌─────┘     ├─── Ch96-97 边缘实战
- │                  ┌─────┘           └─── Ch114-115 Zod + LLM / 端到端 AI Chat
- │            ┌─────┘  Ch48 Checkpointer
+ │                  ┌─────┘           ├─── Ch114-115 Zod + LLM / 端到端 AI Chat
+ │            ┌─────┘                 └─── Ch128-136 AI SDK / MCP / 端到端重构
  │      ┌─────┘     Ch39 RAG
  │ ┌────┘   Ch36 记忆持久化
  │─┘  Ch04 内存调度
  │ Ch01-03
  └──────────────────────────────────────────────────────────▶ 章节
-   Phase1      Phase2      Phase3      Phase4   Phase5   Phase6
+   Phase1      Phase2      Phase3      Phase4   Phase5   Phase6   Phase7
 ```
