@@ -1,0 +1,2959 @@
+{
+  "version": "2.11",
+  "children": [
+    {
+      "type": "frame",
+      "id": "rCSQF",
+      "x": 2609,
+      "y": -4010,
+      "name": "AI 电子伴侣 / 桌面聊天页",
+      "theme": {
+        "Mode": "Light"
+      },
+      "width": 1440,
+      "height": 980,
+      "fill": {
+        "type": "mesh_gradient",
+        "enabled": true,
+        "columns": 3,
+        "rows": 3,
+        "colors": [
+          "#F9FBFF",
+          "#E6EEFF",
+          "#F2E7FF",
+          "#FFF1F8",
+          "#E8FAFF",
+          "#D8F3FF",
+          "#F4EAFF",
+          "#FFF8EF",
+          "#EEF9FF"
+        ],
+        "points": [
+          [
+            0,
+            0
+          ],
+          [
+            0.5,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ],
+          [
+            1,
+            0.5
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0.5,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "layout": "vertical",
+      "gap": 16,
+      "padding": 16,
+      "children": [
+        {
+          "type": "frame",
+          "id": "rPYrY",
+          "name": "sidebar",
+          "clip": true,
+          "width": "fill_container",
+          "height": 72,
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "rotation": 150,
+            "size": {
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#FFFFFFBA",
+                "position": 0
+              },
+              {
+                "color": "#FFFFFF88",
+                "position": 0.6
+              },
+              {
+                "color": "#FFFFFF52",
+                "position": 1
+              }
+            ]
+          },
+          "cornerRadius": 24,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "#FFFFFFB8"
+          },
+          "effect": [
+            {
+              "type": "background_blur",
+              "radius": 18
+            },
+            {
+              "type": "shadow",
+              "shadowType": "outer",
+              "color": "#9DBDFF14",
+              "offset": {
+                "x": 0,
+                "y": 8
+              },
+              "blur": 18
+            }
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "g5cbH",
+              "name": "Sidebar Header",
+              "width": 180,
+              "height": "fill_container",
+              "stroke": {
+                "align": "inside",
+                "thickness": 0,
+                "fill": "#CBCCC900"
+              },
+              "layout": "vertical",
+              "gap": 8,
+              "padding": [
+                0,
+                20
+              ],
+              "justifyContent": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "REIaN",
+                  "name": "Sidebar Logo",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1
+                  },
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "path",
+                      "id": "ja18J",
+                      "name": "Subtract",
+                      "geometry": "M16 0c8.83656 0 16 7.16344 16 16 0 8.83656-7.16344 16-16 16-8.83656 0-16-7.16344-16-16 0-8.83656 7.16344-16 16-16z m1.86035 8.71777c-0.66585-1.68829-3.05485-1.68829-3.7207 0l-1.21485 3.08008c-0.20329 0.51544-0.61151 0.92366-1.12695 1.12695l-3.08008 1.21485c-1.68829 0.66585-1.68829 3.05485 0 3.7207l3.08008 1.21485c0.51544 0.20329 0.92366 0.61151 1.12695 1.12695l1.21485 3.08008c0.66585 1.68829 3.05485 1.68829 3.7207 0l1.21485-3.08008c0.20329-0.51544 0.61151-0.92366 1.12695-1.12695l3.08008-1.21485c1.68829-0.66585 1.68829-3.05485 0-3.7207l-3.08008-1.21485c-0.51544-0.20329-0.92366-0.61151-1.12695-1.12695l-1.21485-3.08008z",
+                      "fill": "$--primary",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "type": "text",
+                      "id": "UdsUN",
+                      "name": "LUNARIS",
+                      "fill": "#FF8400",
+                      "textGrowth": "fixed-width-height",
+                      "width": 108,
+                      "height": 19,
+                      "content": "电子伴侣",
+                      "lineHeight": 1,
+                      "fontFamily": "Geist",
+                      "fontSize": 18,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "chxcj",
+              "name": "Sidebar Content",
+              "height": 48,
+              "fill": {
+                "type": "gradient",
+                "gradientType": "linear",
+                "enabled": true,
+                "rotation": 145,
+                "size": {
+                  "height": 1
+                },
+                "colors": [
+                  {
+                    "color": "#FFFFFFA0",
+                    "position": 0
+                  },
+                  {
+                    "color": "#FFFFFF66",
+                    "position": 0.55
+                  },
+                  {
+                    "color": "#FFFFFF26",
+                    "position": 1
+                  }
+                ]
+              },
+              "cornerRadius": 999,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#FFFFFFC0"
+              },
+              "effect": [
+                {
+                  "type": "background_blur",
+                  "radius": 14
+                },
+                {
+                  "type": "shadow",
+                  "shadowType": "outer",
+                  "color": "#B1CBFF16",
+                  "offset": {
+                    "x": 0,
+                    "y": 6
+                  },
+                  "blur": 12
+                }
+              ],
+              "gap": 4,
+              "padding": [
+                2,
+                4
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "RuEIa",
+                  "name": "itemChat",
+                  "height": 44,
+                  "fill": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 145,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "#FFFFFFE8",
+                        "position": 0
+                      },
+                      {
+                        "color": "#FFFFFFCC",
+                        "position": 0.55
+                      },
+                      {
+                        "color": "#FFFFFF9A",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "cornerRadius": 999,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#FFFFFFD9"
+                  },
+                  "effect": [
+                    {
+                      "type": "background_blur",
+                      "radius": 12
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "#FFFFFF42",
+                      "offset": {
+                        "x": 0,
+                        "y": 4
+                      },
+                      "blur": 10
+                    }
+                  ],
+                  "layout": "vertical",
+                  "gap": 2,
+                  "padding": [
+                    6,
+                    14
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "iZbvi",
+                      "width": 20,
+                      "height": 20,
+                      "iconFontName": "chat_bubble",
+                      "iconFontFamily": "Material Symbols Sharp",
+                      "weight": 100,
+                      "fill": "#111111"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Y5ONM",
+                      "name": "chatLabel",
+                      "fill": "#2B2F38",
+                      "content": "聊天",
+                      "lineHeight": 1,
+                      "fontFamily": "Geist",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "GfxjP",
+                  "name": "itemMemory",
+                  "opacity": 0.82,
+                  "height": 44,
+                  "fill": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 145,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "#FFFFFF5E",
+                        "position": 0
+                      },
+                      {
+                        "color": "#FFFFFF32",
+                        "position": 0.55
+                      },
+                      {
+                        "color": "#FFFFFF14",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "cornerRadius": 999,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#FFFFFF96"
+                  },
+                  "effect": {
+                    "type": "background_blur",
+                    "radius": 8
+                  },
+                  "layout": "vertical",
+                  "gap": 2,
+                  "padding": [
+                    6,
+                    14
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "Ye5OK",
+                      "width": 20,
+                      "height": 20,
+                      "iconFontName": "auto_stories",
+                      "iconFontFamily": "Material Symbols Sharp",
+                      "weight": 100,
+                      "fill": "#2E2E2EB8"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Ko32A",
+                      "name": "memoryLabel",
+                      "fill": "#6F7785",
+                      "content": "记忆",
+                      "lineHeight": 1,
+                      "fontFamily": "Geist",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "SzZEN",
+                  "name": "itemSettings",
+                  "opacity": 0.82,
+                  "height": 44,
+                  "fill": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 145,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "#FFFFFF5E",
+                        "position": 0
+                      },
+                      {
+                        "color": "#FFFFFF32",
+                        "position": 0.55
+                      },
+                      {
+                        "color": "#FFFFFF14",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "cornerRadius": 999,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#FFFFFF96"
+                  },
+                  "effect": {
+                    "type": "background_blur",
+                    "radius": 8
+                  },
+                  "layout": "vertical",
+                  "gap": 2,
+                  "padding": [
+                    6,
+                    14
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "Lovw7",
+                      "width": 20,
+                      "height": 20,
+                      "iconFontName": "settings",
+                      "iconFontFamily": "Material Symbols Sharp",
+                      "weight": 100,
+                      "fill": "#2E2E2EB8"
+                    },
+                    {
+                      "type": "text",
+                      "id": "pkgRd",
+                      "name": "settingsLabel",
+                      "fill": "#6F7785",
+                      "content": "设置",
+                      "lineHeight": 1,
+                      "fontFamily": "Geist",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Elvc4",
+              "name": "Nav Spacer",
+              "width": 180,
+              "height": "fill_container"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "c7dVT",
+          "name": "Main",
+          "width": "fill_container",
+          "height": "fill_container",
+          "gap": 16,
+          "children": [
+            {
+              "type": "frame",
+              "id": "AGm0b",
+              "name": "conversationRail",
+              "clip": true,
+              "width": 258,
+              "height": "fill_container",
+              "fill": {
+                "type": "gradient",
+                "gradientType": "linear",
+                "enabled": true,
+                "rotation": 150,
+                "size": {
+                  "height": 1
+                },
+                "colors": [
+                  {
+                    "color": "#FFFFFFC4",
+                    "position": 0
+                  },
+                  {
+                    "color": "#FFFFFF9B",
+                    "position": 0.58
+                  },
+                  {
+                    "color": "#FFFFFF70",
+                    "position": 1
+                  }
+                ]
+              },
+              "cornerRadius": 24,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#FFFFFFA8"
+              },
+              "effect": [
+                {
+                  "type": "background_blur",
+                  "radius": 14
+                },
+                {
+                  "type": "shadow",
+                  "shadowType": "outer",
+                  "color": "#7FA9EA14",
+                  "offset": {
+                    "x": 0,
+                    "y": 10
+                  },
+                  "blur": 18
+                }
+              ],
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ehzxc",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "pqepF",
+                      "fill": "$--foreground",
+                      "content": "聊天对象",
+                      "fontFamily": "$--font-primary",
+                      "fontSize": 18,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "LTktH",
+                      "width": 32,
+                      "height": 32,
+                      "fill": "#FFFFFF66",
+                      "cornerRadius": 999,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#FFFFFF82"
+                      },
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "b9sJd",
+                          "width": 18,
+                          "height": 18,
+                          "iconFontName": "add_comment",
+                          "iconFontFamily": "Material Symbols Rounded",
+                          "weight": 400,
+                          "fill": "$--foreground"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "a635a",
+                  "fill": "$--muted-foreground",
+                  "content": "最近互动",
+                  "fontFamily": "$--font-primary",
+                  "fontSize": 12,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "40h3C",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "VEDY2",
+                      "width": "fill_container",
+                      "fill": {
+                        "type": "gradient",
+                        "gradientType": "linear",
+                        "enabled": true,
+                        "rotation": 135,
+                        "size": {
+                          "height": 1
+                        },
+                        "colors": [
+                          {
+                            "color": "#DCEBFFCC",
+                            "position": 0
+                          },
+                          {
+                            "color": "#A8C8FFB8",
+                            "position": 1
+                          }
+                        ]
+                      },
+                      "cornerRadius": 22,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#FFFFFF96"
+                      },
+                      "effect": {
+                        "type": "background_blur",
+                        "radius": 18
+                      },
+                      "gap": 12,
+                      "padding": 12,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "GGpb3",
+                          "width": 44,
+                          "height": 44,
+                          "fill": "#FFFFFF78",
+                          "cornerRadius": 999,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "fiF7U",
+                              "fill": "#315B89",
+                              "content": "沐",
+                              "fontFamily": "$--font-primary",
+                              "fontSize": 16,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "uTFO9",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "jQHIh",
+                              "width": "fill_container",
+                              "gap": 8,
+                              "justifyContent": "space_between",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "OW4xd",
+                                  "fill": "#173A65",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "小沐",
+                                  "fontFamily": "$--font-secondary",
+                                  "fontSize": 15,
+                                  "fontWeight": "600"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "WV2W9",
+                                  "fill": "#2E5C8A",
+                                  "content": "12:40",
+                                  "fontFamily": "$--font-secondary",
+                                  "fontSize": 12,
+                                  "fontWeight": "500"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "5DvMp",
+                              "fill": "#1F4C7A",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "今晚轻松聊聊，先从一个瞬间开始",
+                              "fontFamily": "$--font-secondary",
+                              "fontSize": 13,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "T2rcl",
+                      "width": "fill_container",
+                      "fill": {
+                        "type": "gradient",
+                        "gradientType": "linear",
+                        "enabled": true,
+                        "rotation": 145,
+                        "size": {
+                          "height": 1
+                        },
+                        "colors": [
+                          {
+                            "color": "#FFFFFF9A",
+                            "position": 0
+                          },
+                          {
+                            "color": "#FFFFFF62",
+                            "position": 0.6
+                          },
+                          {
+                            "color": "#FFFFFF32",
+                            "position": 1
+                          }
+                        ]
+                      },
+                      "cornerRadius": 22,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#FFFFFF8E"
+                      },
+                      "effect": [
+                        {
+                          "type": "background_blur",
+                          "radius": 18
+                        },
+                        {
+                          "type": "shadow",
+                          "shadowType": "outer",
+                          "color": "#FFFFFF1C",
+                          "offset": {
+                            "x": 0,
+                            "y": 8
+                          },
+                          "blur": 16
+                        }
+                      ],
+                      "gap": 12,
+                      "padding": 12,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "udST3",
+                          "width": 44,
+                          "height": 44,
+                          "fill": "#FFF0D8CC",
+                          "cornerRadius": 999,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "cJqZx",
+                              "fill": "#9A5B06",
+                              "content": "练",
+                              "fontFamily": "$--font-primary",
+                              "fontSize": 16,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "sK612",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "rokhH",
+                              "width": "fill_container",
+                              "gap": 8,
+                              "justifyContent": "space_between",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "bCmPN",
+                                  "fill": "$--foreground",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "表达练习 Bot",
+                                  "fontFamily": "$--font-secondary",
+                                  "fontSize": 15,
+                                  "fontWeight": "600"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "K9HRc",
+                                  "fill": "$--muted-foreground",
+                                  "content": "昨天",
+                                  "fontFamily": "$--font-secondary",
+                                  "fontSize": 12,
+                                  "fontWeight": "500"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "Q0Fm4",
+                              "fill": "$--muted-foreground",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "专注一句话表达与情绪承接",
+                              "fontFamily": "$--font-secondary",
+                              "fontSize": 13,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "zkO9D",
+                      "width": "fill_container",
+                      "fill": {
+                        "type": "gradient",
+                        "gradientType": "linear",
+                        "enabled": true,
+                        "rotation": 145,
+                        "size": {
+                          "height": 1
+                        },
+                        "colors": [
+                          {
+                            "color": "#FFFFFF9A",
+                            "position": 0
+                          },
+                          {
+                            "color": "#FFFFFF62",
+                            "position": 0.6
+                          },
+                          {
+                            "color": "#FFFFFF32",
+                            "position": 1
+                          }
+                        ]
+                      },
+                      "cornerRadius": 22,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#FFFFFF8E"
+                      },
+                      "effect": [
+                        {
+                          "type": "background_blur",
+                          "radius": 18
+                        },
+                        {
+                          "type": "shadow",
+                          "shadowType": "outer",
+                          "color": "#FFFFFF1C",
+                          "offset": {
+                            "x": 0,
+                            "y": 8
+                          },
+                          "blur": 16
+                        }
+                      ],
+                      "gap": 12,
+                      "padding": 12,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "5e4xP",
+                          "width": 44,
+                          "height": 44,
+                          "fill": "#EAF8E8CC",
+                          "cornerRadius": 999,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "BIXuh",
+                              "fill": "#2F6D4B",
+                              "content": "树",
+                              "fontFamily": "$--font-primary",
+                              "fontSize": 16,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "IKrIx",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "Y14Xe",
+                              "width": "fill_container",
+                              "gap": 8,
+                              "justifyContent": "space_between",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "V4lU1",
+                                  "fill": "$--foreground",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "情绪树洞",
+                                  "fontFamily": "$--font-secondary",
+                                  "fontSize": 15,
+                                  "fontWeight": "600"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "xrUfM",
+                                  "fill": "$--muted-foreground",
+                                  "content": "周一",
+                                  "fontFamily": "$--font-secondary",
+                                  "fontSize": 12,
+                                  "fontWeight": "500"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "tr9AO",
+                              "fill": "$--muted-foreground",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "更偏情绪陪伴，不主动切训练",
+                              "fontFamily": "$--font-secondary",
+                              "fontSize": 13,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "YHyHr",
+              "name": "Body",
+              "width": "fill_container",
+              "height": "fill_container",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "vwESE",
+                  "name": "Main Column",
+                  "width": 862,
+                  "height": "fill_container",
+                  "layout": "vertical",
+                  "gap": 18,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "eIWZG",
+                      "name": "chatCard",
+                      "clip": true,
+                      "width": "fill_container",
+                      "height": "fill_container",
+                      "fill": {
+                        "type": "gradient",
+                        "gradientType": "linear",
+                        "enabled": true,
+                        "rotation": 150,
+                        "size": {
+                          "height": 1
+                        },
+                        "colors": [
+                          {
+                            "color": "#FFFFFFD8",
+                            "position": 0
+                          },
+                          {
+                            "color": "#FCFEFFD0",
+                            "position": 0.58
+                          },
+                          {
+                            "color": "#F4FAFFD4",
+                            "position": 1
+                          }
+                        ]
+                      },
+                      "cornerRadius": 24,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#FFFFFFB0"
+                      },
+                      "effect": [
+                        {
+                          "type": "background_blur",
+                          "radius": 16
+                        },
+                        {
+                          "type": "shadow",
+                          "shadowType": "outer",
+                          "color": "#8AB6FF16",
+                          "offset": {
+                            "x": 0,
+                            "y": 12
+                          },
+                          "blur": 22
+                        }
+                      ],
+                      "layout": "vertical",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "BMU6U",
+                          "name": "chatHeader",
+                          "width": "fill_container",
+                          "padding": [
+                            18,
+                            20
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "Y672e",
+                              "gap": 12,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "GLnHi",
+                                  "width": 40,
+                                  "height": 40,
+                                  "fill": "#DCEEFF",
+                                  "cornerRadius": 999,
+                                  "justifyContent": "center",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "iwjm0",
+                                      "fill": "#315B89",
+                                      "content": "沐",
+                                      "fontFamily": "$--font-primary",
+                                      "fontSize": 15,
+                                      "fontWeight": "700"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "oQJ7k",
+                                  "layout": "vertical",
+                                  "gap": 2,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "M5vYx",
+                                      "fill": "$--foreground",
+                                      "content": "小沐",
+                                      "fontFamily": "$--font-secondary",
+                                      "fontSize": 16,
+                                      "fontWeight": "600"
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "lokM5",
+                                      "gap": 6,
+                                      "alignItems": "center",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "MpEXe",
+                                          "fill": "#8B93A1",
+                                          "content": "在线 · 聊天中",
+                                          "fontFamily": "$--font-secondary",
+                                          "fontSize": 13,
+                                          "fontWeight": "normal"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "id": "wseHE",
+                                          "fill": "$--muted-foreground",
+                                          "content": "·",
+                                          "fontFamily": "$--font-secondary",
+                                          "fontSize": 13,
+                                          "fontWeight": "500"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "id": "RjHlF",
+                                          "fill": "#B56A09",
+                                          "content": "正在输入…",
+                                          "fontFamily": "$--font-secondary",
+                                          "fontSize": 13,
+                                          "fontWeight": "600"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "XttU9",
+                              "gap": 8,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "g7Mjj",
+                                  "width": 32,
+                                  "height": 32,
+                                  "fill": "#FFFFFF66",
+                                  "cornerRadius": 999,
+                                  "stroke": {
+                                    "align": "inside",
+                                    "thickness": 1,
+                                    "fill": "#FFFFFF80"
+                                  },
+                                  "justifyContent": "center",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "icon_font",
+                                      "id": "wV5dj",
+                                      "width": 18,
+                                      "height": 18,
+                                      "iconFontName": "search",
+                                      "iconFontFamily": "Material Symbols Rounded",
+                                      "weight": 400,
+                                      "fill": "$--foreground"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "JN3of",
+                                  "width": 32,
+                                  "height": 32,
+                                  "fill": "#FFFFFF66",
+                                  "cornerRadius": 999,
+                                  "stroke": {
+                                    "align": "inside",
+                                    "thickness": 1,
+                                    "fill": "#FFFFFF80"
+                                  },
+                                  "justifyContent": "center",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "icon_font",
+                                      "id": "AKUXW",
+                                      "width": 18,
+                                      "height": 18,
+                                      "iconFontName": "push_pin",
+                                      "iconFontFamily": "Material Symbols Rounded",
+                                      "weight": 400,
+                                      "fill": "$--foreground"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "pz1FK",
+                                  "width": 32,
+                                  "height": 32,
+                                  "fill": "#FFFFFF66",
+                                  "cornerRadius": 999,
+                                  "stroke": {
+                                    "align": "inside",
+                                    "thickness": 1,
+                                    "fill": "#FFFFFF80"
+                                  },
+                                  "justifyContent": "center",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "icon_font",
+                                      "id": "PEuKp",
+                                      "width": 18,
+                                      "height": 18,
+                                      "iconFontName": "tune",
+                                      "iconFontFamily": "Material Symbols Rounded",
+                                      "weight": 400,
+                                      "fill": "$--foreground"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "8FawP",
+                          "name": "chatBody",
+                          "width": "fill_container",
+                          "height": "fill_container",
+                          "layout": "vertical",
+                          "gap": 14,
+                          "padding": [
+                            0,
+                            20
+                          ],
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "HXRKd",
+                              "name": "messages",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 18,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "X9X2R",
+                                  "width": "fill_container",
+                                  "justifyContent": "center",
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "GnwWi",
+                                      "fill": "#FFFFFF52",
+                                      "cornerRadius": 999,
+                                      "padding": [
+                                        6,
+                                        10
+                                      ],
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "pU5U3",
+                                          "fill": "$--muted-foreground",
+                                          "content": "今天 19:21",
+                                          "fontFamily": "$--font-secondary",
+                                          "fontSize": 12,
+                                          "fontWeight": "600"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "2o1mV",
+                                  "width": "fill_container",
+                                  "gap": 12,
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "chm8m",
+                                      "width": 40,
+                                      "height": 40,
+                                      "fill": "#dceeff",
+                                      "cornerRadius": 999,
+                                      "justifyContent": "center",
+                                      "alignItems": "center",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "H5wEd",
+                                          "fill": "#315B89",
+                                          "content": "沐",
+                                          "fontFamily": "$--font-primary",
+                                          "fontSize": 15,
+                                          "fontWeight": "700"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "VNeAN",
+                                      "width": "fill_container",
+                                      "layout": "vertical",
+                                      "gap": 6,
+                                      "children": [
+                                        {
+                                          "type": "frame",
+                                          "id": "qRKD6",
+                                          "gap": 8,
+                                          "alignItems": "center",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "id": "XliYI",
+                                              "fill": "$--foreground",
+                                              "content": "小沐",
+                                              "fontFamily": "$--font-secondary",
+                                              "fontSize": 15,
+                                              "fontWeight": "600"
+                                            },
+                                            {
+                                              "type": "text",
+                                              "id": "aj99Q",
+                                              "fill": "$--muted-foreground",
+                                              "content": "19:21",
+                                              "fontFamily": "$--font-secondary",
+                                              "fontSize": 12,
+                                              "fontWeight": "500"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "frame",
+                                          "id": "PArS5",
+                                          "name": "bubble1",
+                                          "width": 360,
+                                          "fill": {
+                                            "type": "gradient",
+                                            "gradientType": "linear",
+                                            "enabled": true,
+                                            "rotation": 135,
+                                            "size": {
+                                              "height": 1
+                                            },
+                                            "colors": [
+                                              {
+                                                "color": "#DCEBFFCC",
+                                                "position": 0
+                                              },
+                                              {
+                                                "color": "#A8C8FFB8",
+                                                "position": 1
+                                              }
+                                            ]
+                                          },
+                                          "cornerRadius": 24,
+                                          "stroke": {
+                                            "align": "inside",
+                                            "thickness": 1,
+                                            "fill": "#FFFFFFAA"
+                                          },
+                                          "effect": [
+                                            {
+                                              "type": "background_blur",
+                                              "radius": 20
+                                            },
+                                            {
+                                              "type": "shadow",
+                                              "shadowType": "outer",
+                                              "color": "#9CBEF438",
+                                              "offset": {
+                                                "x": 0,
+                                                "y": 8
+                                              },
+                                              "blur": 18
+                                            }
+                                          ],
+                                          "layout": "vertical",
+                                          "padding": [
+                                            14,
+                                            16
+                                          ],
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "id": "k0e2K",
+                                              "fill": "#315273",
+                                              "textGrowth": "fixed-width",
+                                              "width": "fill_container",
+                                              "content": "今天过得怎么样？如果你想聊某个人，可以先从一个小细节开始说。",
+                                              "lineHeight": 1.5,
+                                              "fontFamily": "Geist",
+                                              "fontSize": 16,
+                                              "fontWeight": "normal"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "CxaTR",
+                                  "name": "userMessageRow",
+                                  "width": "fill_container",
+                                  "gap": 12,
+                                  "justifyContent": "end",
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "JRYBy",
+                                      "width": 360,
+                                      "layout": "vertical",
+                                      "gap": 8,
+                                      "children": [
+                                        {
+                                          "type": "frame",
+                                          "id": "yl6T6",
+                                          "width": "fill_container",
+                                          "gap": 8,
+                                          "justifyContent": "end",
+                                          "alignItems": "center",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "id": "1iUZY",
+                                              "fill": "#8B93A1",
+                                              "content": "19:22",
+                                              "fontFamily": "$--font-secondary",
+                                              "fontSize": 12,
+                                              "fontWeight": "normal"
+                                            },
+                                            {
+                                              "type": "text",
+                                              "id": "MIm2X",
+                                              "fill": "$--foreground",
+                                              "content": "若溪",
+                                              "fontFamily": "$--font-secondary",
+                                              "fontSize": 15,
+                                              "fontWeight": "600"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "frame",
+                                          "id": "CPbBe",
+                                          "name": "bubble",
+                                          "width": 360,
+                                          "fill": {
+                                            "type": "gradient",
+                                            "gradientType": "linear",
+                                            "enabled": true,
+                                            "rotation": 135,
+                                            "size": {
+                                              "height": 1
+                                            },
+                                            "colors": [
+                                              {
+                                                "color": "#FFF5EFCC",
+                                                "position": 0
+                                              },
+                                              {
+                                                "color": "#F8E8FFB8",
+                                                "position": 1
+                                              }
+                                            ]
+                                          },
+                                          "cornerRadius": 24,
+                                          "stroke": {
+                                            "align": "inside",
+                                            "thickness": 1,
+                                            "fill": "#FFFFFFAA"
+                                          },
+                                          "effect": [
+                                            {
+                                              "type": "background_blur",
+                                              "radius": 20
+                                            },
+                                            {
+                                              "type": "shadow",
+                                              "shadowType": "outer",
+                                              "color": "#D8B6D026",
+                                              "offset": {
+                                                "x": 0,
+                                                "y": 8
+                                              },
+                                              "blur": 18
+                                            }
+                                          ],
+                                          "layout": "vertical",
+                                          "padding": [
+                                            14,
+                                            16
+                                          ],
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "id": "K6Nhi",
+                                              "fill": "#2B2F38",
+                                              "textGrowth": "fixed-width",
+                                              "width": "fill_container",
+                                              "content": "想练一下聊天里怎么自然表达好感，但别一下子太用力。",
+                                              "lineHeight": 1.5,
+                                              "fontFamily": "Geist",
+                                              "fontSize": 16,
+                                              "fontWeight": "normal"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "PE6sS",
+                                      "width": 40,
+                                      "height": 40,
+                                      "fill": {
+                                        "type": "gradient",
+                                        "gradientType": "linear",
+                                        "enabled": true,
+                                        "rotation": 135,
+                                        "size": {
+                                          "height": 1
+                                        },
+                                        "colors": [
+                                          {
+                                            "color": "#FFD7C2",
+                                            "position": 0
+                                          },
+                                          {
+                                            "color": "#FFC3A5",
+                                            "position": 1
+                                          }
+                                        ]
+                                      },
+                                      "cornerRadius": 999,
+                                      "stroke": {
+                                        "align": "inside",
+                                        "thickness": 1,
+                                        "fill": "#FFFFFFAA"
+                                      },
+                                      "effect": {
+                                        "type": "background_blur",
+                                        "radius": 14
+                                      },
+                                      "justifyContent": "center",
+                                      "alignItems": "center",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "WxBU1",
+                                          "fill": "#8C4B23",
+                                          "content": "若",
+                                          "fontFamily": "$--font-primary",
+                                          "fontSize": 15,
+                                          "fontWeight": "700"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "CG0CS",
+                                  "width": "fill_container",
+                                  "gap": 12,
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "lsfVh",
+                                      "width": 40,
+                                      "height": 40,
+                                      "fill": "#dceeff",
+                                      "cornerRadius": 999,
+                                      "justifyContent": "center",
+                                      "alignItems": "center",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "UVfmV",
+                                          "fill": "#315B89",
+                                          "content": "沐",
+                                          "fontFamily": "$--font-primary",
+                                          "fontSize": 15,
+                                          "fontWeight": "700"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "xmNBm",
+                                      "width": "fill_container",
+                                      "layout": "vertical",
+                                      "gap": 6,
+                                      "children": [
+                                        {
+                                          "type": "frame",
+                                          "id": "cABBr",
+                                          "gap": 8,
+                                          "alignItems": "center",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "id": "xyQh7",
+                                              "fill": "$--foreground",
+                                              "content": "小沐",
+                                              "fontFamily": "$--font-secondary",
+                                              "fontSize": 15,
+                                              "fontWeight": "600"
+                                            },
+                                            {
+                                              "type": "text",
+                                              "id": "RTTVM",
+                                              "fill": "#8B93A1",
+                                              "content": "19:23",
+                                              "fontFamily": "$--font-secondary",
+                                              "fontSize": 12,
+                                              "fontWeight": "normal"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "frame",
+                                          "id": "49Ve8",
+                                          "name": "bubble2",
+                                          "width": 360,
+                                          "fill": {
+                                            "type": "gradient",
+                                            "gradientType": "linear",
+                                            "enabled": true,
+                                            "rotation": 135,
+                                            "size": {
+                                              "height": 1
+                                            },
+                                            "colors": [
+                                              {
+                                                "color": "#DCEBFFCC",
+                                                "position": 0
+                                              },
+                                              {
+                                                "color": "#A8C8FFB8",
+                                                "position": 1
+                                              }
+                                            ]
+                                          },
+                                          "cornerRadius": 24,
+                                          "stroke": {
+                                            "align": "inside",
+                                            "thickness": 1,
+                                            "fill": "#FFFFFFAA"
+                                          },
+                                          "effect": [
+                                            {
+                                              "type": "background_blur",
+                                              "radius": 20
+                                            },
+                                            {
+                                              "type": "shadow",
+                                              "shadowType": "outer",
+                                              "color": "#9CBEF438",
+                                              "offset": {
+                                                "x": 0,
+                                                "y": 8
+                                              },
+                                              "blur": 18
+                                            }
+                                          ],
+                                          "layout": "vertical",
+                                          "padding": [
+                                            14,
+                                            16
+                                          ],
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "id": "DxQdV",
+                                              "fill": "#315273",
+                                              "textGrowth": "fixed-width",
+                                              "width": "fill_container",
+                                              "content": "那你可以先顺着情绪说，再轻轻补一句喜欢，这样会自然很多。",
+                                              "lineHeight": 1.5,
+                                              "fontFamily": "Geist",
+                                              "fontSize": 16,
+                                              "fontWeight": "normal"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "VYrT0",
+                          "name": "chatComposer",
+                          "width": "fill_container",
+                          "padding": [
+                            14,
+                            20,
+                            20,
+                            20
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "iqXlh",
+                              "name": "composerShell",
+                              "width": "fill_container",
+                              "height": 116,
+                              "fill": {
+                                "type": "gradient",
+                                "gradientType": "linear",
+                                "enabled": true,
+                                "rotation": 145,
+                                "size": {
+                                  "height": 1
+                                },
+                                "colors": [
+                                  {
+                                    "color": "#FFFEFD",
+                                    "position": 0
+                                  },
+                                  {
+                                    "color": "#FFFBF8",
+                                    "position": 0.6
+                                  },
+                                  {
+                                    "color": "#FEF5EE",
+                                    "position": 1
+                                  }
+                                ]
+                              },
+                              "cornerRadius": 24,
+                              "stroke": {
+                                "align": "inside",
+                                "thickness": 1,
+                                "fill": "#F6C79C55"
+                              },
+                              "effect": [
+                                {
+                                  "type": "background_blur",
+                                  "radius": 12
+                                },
+                                {
+                                  "type": "shadow",
+                                  "shadowType": "outer",
+                                  "color": "#F6A35B14",
+                                  "offset": {
+                                    "x": 0,
+                                    "y": 8
+                                  },
+                                  "blur": 16
+                                }
+                              ],
+                              "layout": "vertical",
+                              "gap": 12,
+                              "padding": 16,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "O7DNk",
+                                  "width": "fill_container",
+                                  "gap": 12,
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "wk17X",
+                                      "width": "fill_container",
+                                      "height": 44,
+                                      "layout": "vertical",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "2RVdT",
+                                          "fill": "#2B2F38",
+                                          "textGrowth": "fixed-width",
+                                          "width": "fill_container",
+                                          "content": "想和你说，今天想到你时有点开心。",
+                                          "lineHeight": 1.45,
+                                          "fontFamily": "$--font-secondary",
+                                          "fontSize": 16,
+                                          "fontWeight": "normal"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "oiHc0",
+                                      "width": 40,
+                                      "height": 40,
+                                      "fill": "#FFFFFFA6",
+                                      "cornerRadius": 999,
+                                      "stroke": {
+                                        "align": "inside",
+                                        "thickness": 1,
+                                        "fill": "#FFFFFFC4"
+                                      },
+                                      "justifyContent": "center",
+                                      "alignItems": "center",
+                                      "children": [
+                                        {
+                                          "type": "icon_font",
+                                          "id": "8mYx3",
+                                          "width": 18,
+                                          "height": 18,
+                                          "iconFontName": "mood",
+                                          "iconFontFamily": "Material Symbols Rounded",
+                                          "weight": 400,
+                                          "fill": "#6F7785"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "HZOnR",
+                                      "width": 44,
+                                      "height": 44,
+                                      "fill": {
+                                        "type": "gradient",
+                                        "gradientType": "linear",
+                                        "enabled": true,
+                                        "rotation": 135,
+                                        "size": {
+                                          "height": 1
+                                        },
+                                        "colors": [
+                                          {
+                                            "color": "#F6B06F",
+                                            "position": 0
+                                          },
+                                          {
+                                            "color": "#F19147",
+                                            "position": 1
+                                          }
+                                        ]
+                                      },
+                                      "cornerRadius": 999,
+                                      "effect": {
+                                        "type": "shadow",
+                                        "shadowType": "outer",
+                                        "color": "#F6A35B30",
+                                        "offset": {
+                                          "x": 0,
+                                          "y": 6
+                                        },
+                                        "blur": 12
+                                      },
+                                      "justifyContent": "center",
+                                      "alignItems": "center",
+                                      "children": [
+                                        {
+                                          "type": "icon_font",
+                                          "id": "DBThR",
+                                          "width": 20,
+                                          "height": 20,
+                                          "iconFontName": "arrow_upward",
+                                          "iconFontFamily": "Material Symbols Rounded",
+                                          "weight": 500,
+                                          "fill": "#FFFFFF"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "P0Ntt",
+                                  "width": "fill_container",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "qhdIH",
+                                      "gap": 8,
+                                      "children": [
+                                        {
+                                          "type": "frame",
+                                          "id": "WrX3q",
+                                          "fill": "#FFFFFF66",
+                                          "cornerRadius": 999,
+                                          "gap": 6,
+                                          "padding": [
+                                            8,
+                                            10
+                                          ],
+                                          "alignItems": "center",
+                                          "children": [
+                                            {
+                                              "type": "icon_font",
+                                              "id": "d8tWj",
+                                              "width": 14,
+                                              "height": 14,
+                                              "iconFontName": "bolt",
+                                              "iconFontFamily": "Material Symbols Rounded",
+                                              "weight": 500,
+                                              "fill": "#B56A09"
+                                            },
+                                            {
+                                              "type": "text",
+                                              "id": "IasGP",
+                                              "fill": "#C78734",
+                                              "content": "轻训练 ON",
+                                              "fontFamily": "$--font-secondary",
+                                              "fontSize": 12,
+                                              "fontWeight": "500"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "kkgzI",
+                  "name": "Side Column",
+                  "clip": true,
+                  "width": 252,
+                  "height": "fill_container",
+                  "fill": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 150,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "#FFFFFFC4",
+                        "position": 0
+                      },
+                      {
+                        "color": "#FFFFFF9B",
+                        "position": 0.58
+                      },
+                      {
+                        "color": "#FFFFFF70",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "cornerRadius": 24,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#FFFFFFA8"
+                  },
+                  "effect": [
+                    {
+                      "type": "background_blur",
+                      "radius": 14
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "#8CB2FF14",
+                      "offset": {
+                        "x": 0,
+                        "y": 10
+                      },
+                      "blur": 18
+                    }
+                  ],
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "WqXtg",
+                      "name": "debugCard",
+                      "clip": true,
+                      "width": "fill_container",
+                      "height": "fill_container",
+                      "fill": "#FFFFFF00",
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 0,
+                        "fill": "#FFFFFF00"
+                      },
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "eXIeW",
+                          "name": "Card Header",
+                          "width": "fill_container",
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 0,
+                            "fill": "#FFFFFF00"
+                          },
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "ZaNYX",
+                              "name": "debugTitle",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "GbfIj",
+                                  "fill": "#111111",
+                                  "content": "链路摘要总览",
+                                  "fontFamily": "JetBrains Mono",
+                                  "fontSize": 18,
+                                  "fontWeight": "700"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "tmacH",
+                          "name": "Card Content",
+                          "width": "fill_container",
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 0,
+                            "fill": "#FFFFFF00"
+                          },
+                          "layout": "vertical",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "qC2P1",
+                              "name": "debugList",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 8,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "meGXm",
+                                  "width": "fill_container",
+                                  "fill": {
+                                    "type": "gradient",
+                                    "gradientType": "linear",
+                                    "enabled": true,
+                                    "rotation": 145,
+                                    "size": {
+                                      "height": 1
+                                    },
+                                    "colors": [
+                                      {
+                                        "color": "#FFFFFF9A",
+                                        "position": 0
+                                      },
+                                      {
+                                        "color": "#FFFFFF62",
+                                        "position": 0.6
+                                      },
+                                      {
+                                        "color": "#FFFFFF32",
+                                        "position": 1
+                                      }
+                                    ]
+                                  },
+                                  "cornerRadius": 22,
+                                  "stroke": {
+                                    "align": "inside",
+                                    "thickness": 1,
+                                    "fill": "#FFFFFF8E"
+                                  },
+                                  "effect": [
+                                    {
+                                      "type": "background_blur",
+                                      "radius": 18
+                                    },
+                                    {
+                                      "type": "shadow",
+                                      "shadowType": "outer",
+                                      "color": "#FFFFFF1C",
+                                      "offset": {
+                                        "x": 0,
+                                        "y": 8
+                                      },
+                                      "blur": 16
+                                    }
+                                  ],
+                                  "layout": "vertical",
+                                  "gap": 4,
+                                  "padding": 12,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "NAo3J",
+                                      "fill": "#666666",
+                                      "content": "当前模式",
+                                      "fontFamily": "JetBrains Mono",
+                                      "fontSize": 12,
+                                      "fontWeight": "700"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "yxaTW",
+                                      "fill": "#111111",
+                                      "textGrowth": "fixed-width",
+                                      "width": "fill_container",
+                                      "content": "陪伴聊天 → 训练引导中",
+                                      "lineHeight": 1.4,
+                                      "fontFamily": "Geist",
+                                      "fontSize": 13,
+                                      "fontWeight": "500"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "DjBRq",
+                                  "width": "fill_container",
+                                  "fill": {
+                                    "type": "gradient",
+                                    "gradientType": "linear",
+                                    "enabled": true,
+                                    "rotation": 145,
+                                    "size": {
+                                      "height": 1
+                                    },
+                                    "colors": [
+                                      {
+                                        "color": "#FFFFFF9A",
+                                        "position": 0
+                                      },
+                                      {
+                                        "color": "#FFFFFF62",
+                                        "position": 0.6
+                                      },
+                                      {
+                                        "color": "#FFFFFF32",
+                                        "position": 1
+                                      }
+                                    ]
+                                  },
+                                  "cornerRadius": 22,
+                                  "stroke": {
+                                    "align": "inside",
+                                    "thickness": 1,
+                                    "fill": "#FFFFFF8E"
+                                  },
+                                  "effect": [
+                                    {
+                                      "type": "background_blur",
+                                      "radius": 18
+                                    },
+                                    {
+                                      "type": "shadow",
+                                      "shadowType": "outer",
+                                      "color": "#FFFFFF1C",
+                                      "offset": {
+                                        "x": 0,
+                                        "y": 8
+                                      },
+                                      "blur": 16
+                                    }
+                                  ],
+                                  "layout": "vertical",
+                                  "gap": 4,
+                                  "padding": 12,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "ouOyE",
+                                      "fill": "#666666",
+                                      "content": "记忆命中摘要",
+                                      "fontFamily": "JetBrains Mono",
+                                      "fontSize": 12,
+                                      "fontWeight": "700"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "LtXbh",
+                                      "fill": "#666666",
+                                      "textGrowth": "fixed-width",
+                                      "width": "fill_container",
+                                      "content": "命中 3 条：偏好真诚表达、怕油腻话术、习惯慢热推进。",
+                                      "lineHeight": 1.4,
+                                      "fontFamily": "Geist",
+                                      "fontSize": 13,
+                                      "fontWeight": "500"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "ViSKu",
+                                  "width": "fill_container",
+                                  "fill": {
+                                    "type": "gradient",
+                                    "gradientType": "linear",
+                                    "enabled": true,
+                                    "rotation": 145,
+                                    "size": {
+                                      "height": 1
+                                    },
+                                    "colors": [
+                                      {
+                                        "color": "#FFFFFF9A",
+                                        "position": 0
+                                      },
+                                      {
+                                        "color": "#FFFFFF62",
+                                        "position": 0.6
+                                      },
+                                      {
+                                        "color": "#FFFFFF32",
+                                        "position": 1
+                                      }
+                                    ]
+                                  },
+                                  "cornerRadius": 22,
+                                  "stroke": {
+                                    "align": "inside",
+                                    "thickness": 1,
+                                    "fill": "#FFFFFF8E"
+                                  },
+                                  "effect": [
+                                    {
+                                      "type": "background_blur",
+                                      "radius": 18
+                                    },
+                                    {
+                                      "type": "shadow",
+                                      "shadowType": "outer",
+                                      "color": "#FFFFFF1C",
+                                      "offset": {
+                                        "x": 0,
+                                        "y": 8
+                                      },
+                                      "blur": 16
+                                    }
+                                  ],
+                                  "layout": "vertical",
+                                  "gap": 4,
+                                  "padding": 12,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "XZfHX",
+                                      "fill": "#666666",
+                                      "content": "情绪状态摘要",
+                                      "fontFamily": "JetBrains Mono",
+                                      "fontSize": 12,
+                                      "fontWeight": "700"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "9bnSy",
+                                      "fill": "#666666",
+                                      "textGrowth": "fixed-width",
+                                      "width": "fill_container",
+                                      "content": "期待 + 一点犹豫，建议给更多安全感和低压反馈。",
+                                      "lineHeight": 1.4,
+                                      "fontFamily": "Geist",
+                                      "fontSize": 13,
+                                      "fontWeight": "500"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "HGdaW",
+                                  "width": "fill_container",
+                                  "fill": {
+                                    "type": "gradient",
+                                    "gradientType": "linear",
+                                    "enabled": true,
+                                    "rotation": 145,
+                                    "size": {
+                                      "height": 1
+                                    },
+                                    "colors": [
+                                      {
+                                        "color": "#FFFFFF9A",
+                                        "position": 0
+                                      },
+                                      {
+                                        "color": "#FFFFFF62",
+                                        "position": 0.6
+                                      },
+                                      {
+                                        "color": "#FFFFFF32",
+                                        "position": 1
+                                      }
+                                    ]
+                                  },
+                                  "cornerRadius": 22,
+                                  "stroke": {
+                                    "align": "inside",
+                                    "thickness": 1,
+                                    "fill": "#FFFFFF8E"
+                                  },
+                                  "effect": [
+                                    {
+                                      "type": "background_blur",
+                                      "radius": 18
+                                    },
+                                    {
+                                      "type": "shadow",
+                                      "shadowType": "outer",
+                                      "color": "#FFFFFF1C",
+                                      "offset": {
+                                        "x": 0,
+                                        "y": 8
+                                      },
+                                      "blur": 16
+                                    }
+                                  ],
+                                  "layout": "vertical",
+                                  "gap": 4,
+                                  "padding": 12,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "4IXNz",
+                                      "fill": "#666666",
+                                      "content": "当前链路节点摘要",
+                                      "fontFamily": "JetBrains Mono",
+                                      "fontSize": 12,
+                                      "fontWeight": "700"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "xL8QK",
+                                      "fill": "#666666",
+                                      "textGrowth": "fixed-width",
+                                      "width": "fill_container",
+                                      "content": "Intent Router → Companion Reply → Training Planner → Result Summarizer",
+                                      "lineHeight": 1.4,
+                                      "fontFamily": "Geist",
+                                      "fontSize": 13,
+                                      "fontWeight": "500"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "YC3vE",
+                                  "width": "fill_container",
+                                  "fill": {
+                                    "type": "gradient",
+                                    "gradientType": "linear",
+                                    "enabled": true,
+                                    "rotation": 145,
+                                    "size": {
+                                      "height": 1
+                                    },
+                                    "colors": [
+                                      {
+                                        "color": "#FFFFFF9A",
+                                        "position": 0
+                                      },
+                                      {
+                                        "color": "#FFFFFF62",
+                                        "position": 0.6
+                                      },
+                                      {
+                                        "color": "#FFFFFF32",
+                                        "position": 1
+                                      }
+                                    ]
+                                  },
+                                  "cornerRadius": 22,
+                                  "stroke": {
+                                    "align": "inside",
+                                    "thickness": 1,
+                                    "fill": "#FFFFFF8E"
+                                  },
+                                  "effect": [
+                                    {
+                                      "type": "background_blur",
+                                      "radius": 18
+                                    },
+                                    {
+                                      "type": "shadow",
+                                      "shadowType": "outer",
+                                      "color": "#FFFFFF1C",
+                                      "offset": {
+                                        "x": 0,
+                                        "y": 8
+                                      },
+                                      "blur": 16
+                                    }
+                                  ],
+                                  "layout": "vertical",
+                                  "gap": 4,
+                                  "padding": 12,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "bmei6",
+                                      "fill": "#666666",
+                                      "content": "当前模型任务映射摘要",
+                                      "fontFamily": "JetBrains Mono",
+                                      "fontSize": 12,
+                                      "fontWeight": "700"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "4uZIh",
+                                      "fill": "#666666",
+                                      "textGrowth": "fixed-width",
+                                      "width": "fill_container",
+                                      "content": "陪伴回复 / 训练规划 / 结果总结 / 记忆整理 已拆分映射。",
+                                      "lineHeight": 1.4,
+                                      "fontFamily": "Geist",
+                                      "fontSize": 13,
+                                      "fontWeight": "500"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "themes": {
+    "Mode": [
+      "Light",
+      "Dark"
+    ]
+  },
+  "variables": {
+    "--sidebar": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#E7E8E5"
+        },
+        {
+          "value": "#18181b",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--sidebar-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#666666"
+        },
+        {
+          "value": "#fafafa",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--sidebar-primary": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#18181b"
+        },
+        {
+          "value": "#18181b",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--sidebar-primary-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#fafafa"
+        },
+        {
+          "value": "#fafafa",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--sidebar-border": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#CBCCC9"
+        },
+        {
+          "value": "#ffffff1a",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--sidebar-accent": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#CBCCC9"
+        },
+        {
+          "value": "#2a2a30",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--sidebar-accent-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#18181b"
+        },
+        {
+          "value": "#fafafa",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--sidebar-ring": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#71717a"
+        },
+        {
+          "value": "#71717a",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--background": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#F2F3F0"
+        },
+        {
+          "value": "#111111",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#111111"
+        },
+        {
+          "value": "#FFFFFF",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--card": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#FFFFFF"
+        },
+        {
+          "value": "#1A1A1A",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--card-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#111111"
+        },
+        {
+          "value": "#FFFFFF",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--popover": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#FFFFFF"
+        },
+        {
+          "value": "#1A1A1A",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--popover-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#111111"
+        },
+        {
+          "value": "#FFFFFF",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--primary": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#FF8400"
+        },
+        {
+          "value": "#FF8400",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--primary-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#111111"
+        },
+        {
+          "value": "#111111",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--secondary": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#E7E8E5"
+        },
+        {
+          "value": "#2E2E2E",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--secondary-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#111111"
+        },
+        {
+          "value": "#FFFFFF",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--muted": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#F2F3F0"
+        },
+        {
+          "value": "#2E2E2E",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--muted-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#666666"
+        },
+        {
+          "value": "#B8B9B6",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--accent": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#F2F3F0"
+        },
+        {
+          "value": "#111111",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--accent-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#111111"
+        },
+        {
+          "value": "#F2F3F0",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--destructive": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#D93C15"
+        },
+        {
+          "value": "#FF5C33",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--border": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#CBCCC9"
+        },
+        {
+          "value": "#2E2E2E",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--input": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#CBCCC9"
+        },
+        {
+          "value": "#2E2E2E",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--ring": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#666666"
+        },
+        {
+          "value": "#666666",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--white": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "--black": {
+      "type": "color",
+      "value": "#000000"
+    },
+    "--font-primary": {
+      "type": "string",
+      "value": "JetBrains Mono"
+    },
+    "--font-secondary": {
+      "type": "string",
+      "value": "Geist"
+    },
+    "--radius-none": {
+      "type": "number",
+      "value": 0
+    },
+    "--radius-pill": {
+      "type": "number",
+      "value": 999
+    },
+    "--color-success": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#DFE6E1"
+        },
+        {
+          "value": "#222924",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--color-success-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#004D1A"
+        },
+        {
+          "value": "#B6FFCE",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--color-warning": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#E9E3D8"
+        },
+        {
+          "value": "#291C0F",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--color-warning-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#804200"
+        },
+        {
+          "value": "#FF8400",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--color-error": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#E5DCDA"
+        },
+        {
+          "value": "#24100B",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--color-error-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#8C1C00"
+        },
+        {
+          "value": "#FF5C33",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--color-info": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#DFDFE6"
+        },
+        {
+          "value": "#222229",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--color-info-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#000066"
+        },
+        {
+          "value": "#B2B2FF",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--radius-m": {
+      "type": "number",
+      "value": 16
+    }
+  }
+}
